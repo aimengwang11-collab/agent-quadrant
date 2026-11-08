@@ -93,7 +93,7 @@ body { -webkit-user-select: none; user-select: none; -webkit-touch-callout: none
 
 <div id="panel">
   <h3>图标设置</h3>
-  <p>默认从各家官网自动加载图标。加载不出来、或想用 App Store 上更清晰的版本：截图/保存官方图标后点“换图”。图片只存在这台设备的浏览器里。</p>
+  <p>默认使用仓库里的官方 App 图标。若要换成自己的图：点“换图标”上传，图片只存在这台设备的浏览器里；点清除可恢复官方图。</p>
   <div id="rows"></div>
   <div style="text-align:right; margin-top:12px;"><button id="btnClose">完成</button></div>
 </div>
@@ -147,6 +147,8 @@ body { -webkit-user-select: none; user-select: none; -webkit-touch-callout: none
   function iconSources(a) {
     var list = [];
     if (imgs[a.id]) list.push(imgs[a.id]);
+    // 仓库内置官方 App 图标（App Store / 官网品牌图）
+    list.push('icons/' + a.id + '.png');
     if (a.domain) {
       list.push('https://www.google.com/s2/favicons?sz=128&domain=' + a.domain);
       list.push('https://icons.duckduckgo.com/ip3/' + a.domain + '.ico');
