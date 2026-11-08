@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Agent 象限">
+<title>AI 时代怎么选 Personal Agent · 四维象限</title>
+<style>
+html, body { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background: #07090C; }
+body { -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; -webkit-tap-highlight-color: rgba(0,0,0,0);
+  font-family: -apple-system, "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", sans-serif; color: #F2F2F2; }
+#stage { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; background: #0E1116; overflow: hidden;
+  -webkit-transform-origin: 0 0; transform-origin: 0 0; }
+.abs { position: absolute; }
+.quad { position: absolute; }
+.hline { position: absolute; height: 2px; background: #3A4250; }
+.vline { position: absolute; width: 2px; background: #3A4250; }
+.pole { position: absolute; font-size: 36px; font-weight: 900; white-space: nowrap; }
+.qname { position: absolute; font-size: 22px; color: #9AA4B2; white-space: nowrap; }
+#tray { position: absolute; left: 40px; top: 900px; width: 1840px; height: 160px; background: #151A22; border-radius: 28px; }
+#trayHint { position: absolute; left: 70px; top: 870px; font-size: 18px; color: #6B7686; }
+
+.agent { position: absolute; width: 130px; height: 146px; margin-left: -65px; margin-top: -73px; text-align: center;
+  -webkit-transition: left .35s ease, top .35s ease, -webkit-transform .15s ease; transition: left .35s ease, top .35s ease, transform .15s ease; z-index: 5; }
+.agent.dragging { -webkit-transition: none; transition: none; z-index: 50; -webkit-transform: scale(1.15); transform: scale(1.15); }
+.agent .icon { width: 96px; height: 96px; margin: 0 auto; border-radius: 24px; overflow: hidden; background: #FFFFFF;
+  box-shadow: 0 6px 18px rgba(0,0,0,.45); position: relative; }
+.agent .icon img { width: 100%; height: 100%; display: block; }
+.agent .icon .letter { position: absolute; left: 0; top: 0; width: 96px; height: 96px; line-height: 96px; font-size: 40px; font-weight: 800; color: #0E1116; background: #DDE3EC; }
+.agent .name { margin-top: 10px; font-size: 22px; font-weight: 700; white-space: nowrap; text-shadow: 0 2px 6px rgba(0,0,0,.6); }
+
+#ui { position: fixed; right: 10px; top: 10px; z-index: 100; }
+#ui button, #panel button { font-size: 14px; padding: 8px 12px; margin-left: 6px; border: 0; border-radius: 10px; background: rgba(255,255,255,.14); color: #fff; }
+#ui.hidden button { opacity: 0.08; }
+#panel { display: none; position: fixed; left: 50%; top: 50%; width: 92%; max-width: 520px; max-height: 84%; overflow-y: auto;
+  -webkit-overflow-scrolling: touch; -webkit-transform: translate(-50%,-50%); transform: translate(-50%,-50%);
+  background: #1B212B; border-radius: 16px; padding: 16px; z-index: 200; box-shadow: 0 10px 40px rgba(0,0,0,.6); -webkit-user-select: auto; user-select: auto; }
+#panel h3 { margin: 0 0 8px 0; font-size: 18px; }
+#panel p { margin: 0 0 12px 0; font-size: 13px; color: #9AA4B2; line-height: 1.5; }
+.row { padding: 10px 0; border-top: 1px solid #2A3240; font-size: 15px; }
+.row img { width: 36px; height: 36px; border-radius: 8px; vertical-align: middle; margin-right: 10px; background: #fff; }
+.row label { display: inline-block; margin-left: 8px; padding: 6px 10px; border-radius: 8px; background: rgba(255,255,255,.14); font-size: 13px; }
+.row input { display: none; }
+.row .clr { margin-left: 6px; font-size: 13px; color: #9AA4B2; text-decoration: underline; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <!-- 标题 -->
+  <div class="abs" style="left:60px; top:44px; width:360px;">
+    <div style="font-size:18px; letter-spacing:4px; color:#9AA4B2;">PERSONAL AGENT GUIDE</div>
+    <div style="font-size:44px; font-weight:900; line-height:1.2; margin-top:12px;">AI 时代<br>怎么选你的<br>Personal Agent</div>
+  </div>
+  <div class="abs" style="right:60px; top:50px; width:330px; text-align:right; font-size:22px; line-height:1.6; color:#C9D1DB;">
+    <div style="font-weight:800; color:#F2F2F2;">没有全能选手</div>
+    <div>每个 agent 最多两项做得好</div>
+    <div style="margin-top:10px; font-size:19px; color:#9AA4B2;">对角很难兼得：<br>强能力 ⇄ 低成本<br>大生态 ⇄ 快速度</div>
+  </div>
+
+  <!-- 象限底色 -->
+  <div class="quad" style="left:440px; top:110px; width:520px; height:360px; background:rgba(143,179,255,0.06); border-top-left-radius:24px;"></div>
+  <div class="quad" style="left:960px; top:110px; width:520px; height:360px; background:rgba(255,196,107,0.06); border-top-right-radius:24px;"></div>
+  <div class="quad" style="left:440px; top:470px; width:520px; height:360px; background:rgba(111,224,181,0.06); border-bottom-left-radius:24px;"></div>
+  <div class="quad" style="left:960px; top:470px; width:520px; height:360px; background:rgba(240,141,184,0.06); border-bottom-right-radius:24px;"></div>
+
+  <!-- 坐标轴 -->
+  <div class="hline" style="left:440px; top:469px; width:1040px;"></div>
+  <div class="vline" style="left:959px; top:110px; height:720px;"></div>
+
+  <!-- 四极 -->
+  <div class="pole" style="left:960px; top:52px; -webkit-transform:translateX(-50%); transform:translateX(-50%); color:#8FB3FF;">能力强 ▲</div>
+  <div class="pole" style="left:960px; top:836px; -webkit-transform:translateX(-50%); transform:translateX(-50%); color:#F08DB8; font-size:30px;">▼ 成本低</div>
+  <div class="pole" style="left:424px; top:470px; -webkit-transform:translate(-100%,-50%); transform:translate(-100%,-50%); color:#6FE0B5;">生态 ◀</div>
+  <div class="pole" style="left:1496px; top:470px; -webkit-transform:translateY(-50%); transform:translateY(-50%); color:#FFC46B;">▶ 速度快</div>
+
+  <!-- 象限名 -->
+  <div class="qname" style="left:462px; top:126px;">能力 × 生态</div>
+  <div class="qname" style="left:1458px; top:126px; -webkit-transform:translateX(-100%); transform:translateX(-100%);">能力 × 速度</div>
+  <div class="qname" style="left:462px; top:788px;">生态 × 成本</div>
+  <div class="qname" style="left:1458px; top:788px; -webkit-transform:translateX(-100%); transform:translateX(-100%);">速度 × 成本</div>
+
+  <div id="trayHint"></div>
+  <div id="tray"></div>
+</div>
+
+<div id="ui">
+  <button id="btnHide">隐藏按钮</button>
+  <button id="btnIcons">换图标</button>
+  <button id="btnReset">全部归位</button>
+</div>
+
+<div id="panel">
+  <h3>图标设置</h3>
+  <p>默认从各家官网自动加载图标。加载不出来、或想用 App Store 上更清晰的版本：截图/保存官方图标后点“换图”。图片只存在这台设备的浏览器里。</p>
+  <div id="rows"></div>
+  <div style="text-align:right; margin-top:12px;"><button id="btnClose">完成</button></div>
+</div>
+
+<script>
+(function () {
+  var W = 1920, H = 1080;
+  var DROP_LIMIT_Y = 880; // 低于这条线放下 = 回到托盘
+  var KEY_POS = 'aq_pos_v1', KEY_IMG = 'aq_img_v1';
+
+  // domain: 官网域名，用来加载官方图标；没有可靠域名的留空，用字母占位 + 手动换图
+  var AGENTS = [
+    { id: 'claude',  name: 'Claude',       domain: 'claude.ai',           letter: 'C' },
+    { id: 'dots',    name: 'OpenAI dots',  domain: 'chatgpt.com',         letter: 'D' },
+    { id: 'grok',    name: 'Grok Bot',     domain: 'grok.com',            letter: 'G' },
+    { id: 'openclaw',name: 'OpenClaw',     domain: 'openclaw.ai',         letter: 'OC' },
+    { id: 'gemini',  name: 'Gemini Spark', domain: 'gemini.google.com',   letter: 'GS' },
+    { id: 'hermes',  name: 'Hermes Agent', domain: 'nousresearch.com',    letter: 'H' },
+    { id: 'muse',    name: 'Meta Muse',    domain: 'muse.ai',             letter: 'M' },
+    { id: 'hark',    name: 'Hark',         domain: 'hark.com',            letter: 'Hk' },
+    { id: 'quest',   name: 'Quest',        domain: '',                    letter: 'Q' },
+    { id: 'pally',   name: 'Pally',        domain: 'pally.com',           letter: 'P' },
+    { id: 'wabi',    name: 'Wabi',         domain: 'wabi.ai',             letter: 'W' }
+  ];
+
+  function load(key) { try { return JSON.parse(localStorage.getItem(key) || '{}') || {}; } catch (e) { return {}; } }
+  function save(key, v) { try { localStorage.setItem(key, JSON.stringify(v)); } catch (e) {} }
+
+  var pos = load(KEY_POS);   // id -> {x,y}，只存放在象限里的
+  var imgs = load(KEY_IMG);  // id -> dataURL（手动换的图）
+
+  var stage = document.getElementById('stage');
+  var scale = 1, offX = 0, offY = 0;
+
+  function fit() {
+    var vw = window.innerWidth, vh = window.innerHeight;
+    scale = Math.min(vw / W, vh / H);
+    offX = (vw - W * scale) / 2; offY = (vh - H * scale) / 2;
+    var t = 'translate(' + offX + 'px,' + offY + 'px) scale(' + scale + ')';
+    stage.style.webkitTransform = t; stage.style.transform = t;
+  }
+  window.addEventListener('resize', fit);
+  window.addEventListener('orientationchange', function () { setTimeout(fit, 300); });
+  fit();
+
+  function trayPos(i) {
+    var n = AGENTS.length, gap = 160;
+    return { x: W / 2 + (i - (n - 1) / 2) * gap, y: 985 };
+  }
+
+  function iconSources(a) {
+    var list = [];
+    if (imgs[a.id]) list.push(imgs[a.id]);
+    if (a.domain) {
+      list.push('https://www.google.com/s2/favicons?sz=128&domain=' + a.domain);
+      list.push('https://icons.duckduckgo.com/ip3/' + a.domain + '.ico');
+    }
+    return list;
+  }
+
+  function renderIcon(a, box) {
+    box.innerHTML = '';
+    var letter = document.createElement('div');
+    letter.className = 'letter'; letter.textContent = a.letter;
+    box.appendChild(letter);
+    var srcs = iconSources(a), k = 0;
+    function next() {
+      if (k >= srcs.length) return;
+      var img = new Image();
+      var src = srcs[k++];
+      var isUser = src.indexOf('data:') === 0;
+      img.onload = function () {
+        if (!isUser && img.naturalWidth < 32) { next(); return; } // 默认地球小图 = 没找到
+        img.draggable = false;
+        box.innerHTML = ''; box.appendChild(img);
+      };
+      img.onerror = next;
+      img.src = src;
+    }
+    next();
+  }
+
+  var els = {};
+  AGENTS.forEach(function (a, i) {
+    var el = document.createElement('div');
+    el.className = 'agent';
+    el.innerHTML = '<div class="icon"></div><div class="name"></div>';
+    el.querySelector('.name').textContent = a.name;
+    renderIcon(a, el.querySelector('.icon'));
+    stage.appendChild(el);
+    els[a.id] = el;
+    place(a, i, false);
+    bindDrag(el, a, i);
+  });
+
+  function place(a, i, animate) {
+    var el = els[a.id];
+    var p = pos[a.id] || trayPos(i);
+    el.style.left = p.x + 'px'; el.style.top = p.y + 'px';
+  }
+
+  function toStage(clientX, clientY) {
+    return { x: (clientX - offX) / scale, y: (clientY - offY) / scale };
+  }
+
+  function bindDrag(el, a, i) {
+    var dragging = false, dx = 0, dy = 0;
+    function start(cx, cy) {
+      var p = toStage(cx, cy);
+      dx = p.x - parseFloat(el.style.left); dy = p.y - parseFloat(el.style.top);
+      dragging = true; el.className = 'agent dragging';
+    }
+    function move(cx, cy) {
+      if (!dragging) return;
+      var p = toStage(cx, cy);
+      el.style.left = (p.x - dx) + 'px'; el.style.top = (p.y - dy) + 'px';
+    }
+    function end() {
+      if (!dragging) return;
+      dragging = false; el.className = 'agent';
+      var x = parseFloat(el.style.left), y = parseFloat(el.style.top);
+      if (y > DROP_LIMIT_Y) { delete pos[a.id]; }
+      else {
+        x = Math.max(80, Math.min(W - 80, x)); y = Math.max(90, y);
+        pos[a.id] = { x: x, y: y };
+      }
+      save(KEY_POS, pos);
+      place(a, i);
+    }
+    el.addEventListener('touchstart', function (e) { var t = e.touches[0]; start(t.clientX, t.clientY); e.preventDefault(); }, { passive: false });
+    el.addEventListener('touchmove', function (e) { var t = e.touches[0]; move(t.clientX, t.clientY); e.preventDefault(); }, { passive: false });
+    el.addEventListener('touchend', function (e) { end(); e.preventDefault(); }, { passive: false });
+    el.addEventListener('touchcancel', end);
+    el.addEventListener('mousedown', function (e) {
+      start(e.clientX, e.clientY); e.preventDefault();
+      function mm(ev) { move(ev.clientX, ev.clientY); }
+      function mu() { end(); document.removeEventListener('mousemove', mm); document.removeEventListener('mouseup', mu); }
+      document.addEventListener('mousemove', mm); document.addEventListener('mouseup', mu);
+    });
+  }
+
+  // 防止整页被拖动/缩放
+  document.addEventListener('touchmove', function (e) {
+    if (document.getElementById('panel').style.display === 'block') return;
+    e.preventDefault();
+  }, { passive: false });
+
+  // 按钮
+  document.getElementById('btnReset').onclick = function () {
+    if (!confirm('把所有图标放回下面的托盘？')) return;
+    pos = {}; save(KEY_POS, pos);
+    AGENTS.forEach(function (a, i) { place(a, i); });
+  };
+  var ui = document.getElementById('ui');
+  document.getElementById('btnHide').onclick = function () {
+    var hidden = ui.className === 'hidden';
+    ui.className = hidden ? '' : 'hidden';
+    this.textContent = hidden ? '隐藏按钮' : '显示';
+  };
+
+  var panel = document.getElementById('panel'), rows = document.getElementById('rows');
+  function buildRows() {
+    rows.innerHTML = '';
+    AGENTS.forEach(function (a) {
+      var row = document.createElement('div'); row.className = 'row';
+      var thumb = document.createElement('img');
+      var box = els[a.id].querySelector('.icon img');
+      if (box) thumb.src = box.src;
+      row.appendChild(thumb);
+      row.appendChild(document.createTextNode(a.name));
+      var lab = document.createElement('label'); lab.textContent = '换图';
+      var inp = document.createElement('input'); inp.type = 'file'; inp.accept = 'image/*';
+      lab.appendChild(inp); row.appendChild(lab);
+      inp.onchange = function () {
+        var f = inp.files && inp.files[0]; if (!f) return;
+        var r = new FileReader();
+        r.onload = function () {
+          var im = new Image();
+          im.onload = function () {
+            var c = document.createElement('canvas'); c.width = 256; c.height = 256;
+            var s = Math.min(im.width, im.height);
+            c.getContext('2d').drawImage(im, (im.width - s) / 2, (im.height - s) / 2, s, s, 0, 0, 256, 256);
+            imgs[a.id] = c.toDataURL('image/png'); save(KEY_IMG, imgs);
+            renderIcon(a, els[a.id].querySelector('.icon'));
+            setTimeout(buildRows, 200);
+          };
+          im.src = r.result;
+        };
+        r.readAsDataURL(f);
+      };
+      if (imgs[a.id]) {
+        var clr = document.createElement('span'); clr.className = 'clr'; clr.textContent = '恢复默认';
+        clr.onclick = function () { delete imgs[a.id]; save(KEY_IMG, imgs); renderIcon(a, els[a.id].querySelector('.icon')); setTimeout(buildRows, 300); };
+        row.appendChild(clr);
+      }
+      rows.appendChild(row);
+    });
+  }
+  document.getElementById('btnIcons').onclick = function () { buildRows(); panel.style.display = 'block'; };
+  document.getElementById('btnClose').onclick = function () { panel.style.display = 'none'; };
+})();
+</script>
+</body>
+</html>
