@@ -44,9 +44,14 @@ body { -webkit-user-select: none; user-select: none; -webkit-touch-callout: none
 .row label { display: inline-block; margin-left: 8px; padding: 6px 10px; border-radius: 8px; background: rgba(255,255,255,.14); font-size: 13px; }
 .row input { display: none; }
 .row .clr { margin-left: 6px; font-size: 13px; color: #9AA4B2; text-decoration: underline; }
+#compareLink { position: fixed; left: 10px; top: 10px; z-index: 100; padding: 6px 9px;
+  border-radius: 8px; background: rgba(14,17,22,.85); color: #9AA4B2; font-size: 12px; text-decoration: none; }
+#compareLink:hover, #compareLink:focus-visible { color: #8FB3FF; text-decoration: underline; }
+@media (max-width: 380px) { #compareLink { top: 54px; } }
 </style>
 </head>
 <body>
+<a id="compareLink" href="compare.html">比较这 11 种 AI ↗</a>
 <div id="stage">
   <!-- 标题 -->
   <div class="abs" style="left:60px; top:44px; width:360px;">
