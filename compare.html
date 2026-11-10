@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="11 种 AI 的个人对照页：各自擅长什么、适合谁、使用前要注意什么。信息截至 2026-11。">
+<meta name="description" content="11 种 AI 的个人对照页：各自擅长什么、在哪用、费用和谁能用、适合谁、使用前要注意什么。信息截至 2026-11。">
 <title>比较这 11 种 AI · 个人对照页</title>
 <style>
 :root { color-scheme: dark; }
@@ -34,8 +34,7 @@ dt { margin: 16px 0 4px; font-size: 14px; font-weight: 700; color: #8FB3FF; }
 dd { font-size: 15px; }
 dt.caution { color: #FFC46B; }
 .rename { padding: 10px 12px; border-left: 2px solid #F08DB8; background: #17151E; font-size: 14px; }
-.choice { border-top: 1px solid #252D39; padding-top: 14px; margin: 20px 0 0; font-size: 15px; }
-.choice strong { color: #6FE0B5; }
+dt.choice-label { border-top: 1px solid #252D39; padding-top: 14px; margin-top: 20px; color: #6FE0B5; }
 .efficiency { margin: 40px 0; padding: 26px; background: #0E1116; border: 1px solid #252D39; border-radius: 18px; }
 .efficiency ol { margin: 16px 0 0; padding-left: 23px; }
 .efficiency li { padding-left: 4px; margin: 12px 0; font-size: 15px; }
@@ -58,7 +57,7 @@ footer h2 { color: #F2F2F2; font-size: 18px; }
 <a class="back" href="index.html">← 返回四象限</a>
 <p class="eyebrow">11 种 AI · 个人对照页</p>
 <h1>从你要做的事，选一个开始。</h1>
-<p>这一页只比较这 11 种 AI，不讲复杂原理，只说各自擅长什么、适合谁、用的时候要注意什么。</p>
+<p>这一页只比较这 11 种 AI，不讲复杂原理，只说各自擅长什么、在哪用、费用和谁能用、适合谁、用的时候要注意什么。</p>
 <p class="note">先看你所在地区和套餐能不能用，以官网为准。以下按四象限的产品顺序排列。</p>
 </header>
 <nav aria-label="跳到产品卡片">
@@ -80,102 +79,123 @@ footer h2 { color: #F2F2F2; font-size: 18px; }
 <div class="card-head"><img src="icons/claude.png" width="56" height="56" alt=""><div><h2 id="claude-name">Claude Duet</h2><a href="https://claude.com/product/claude-duet" target="_blank" rel="noopener noreferrer">官方入口 ↗</a></div></div>
 <dl>
 <dt>擅长什么</dt><dd>整理邮箱和日历，做晨间简报、起草回复；也能把较大的工作整理成文档、表格或幻灯片，交给你审。</dd>
+<dt>在哪用</dt><dd>独立的 iOS / Android 应用；电脑上可在 claude.ai 网页打开，可用文字或语音。官网未列出独立桌面应用。</dd>
+<dt>费用和谁能用</dt><dd>研究预览，美国地区的 Claude Pro、Max、Ultra 用户需排队，暂不含 Team / Enterprise；与 Claude 其它功能共用套餐用量。个人套餐：Free $0（不在上述资格内）；Pro 按月 $20，年付预付 $200（折合 $17/月）；Max $100/月；Ultra $200/月。价格可能调整，以官网为准。</dd>
 <dt>适合谁</dt><dd>想把办公事务交给助手持续跟进，并愿意检查结果的人。</dd>
-<dt class="caution">使用上要注意什么</dt><dd>研究预览面向美国地区的 Claude Pro、Max、Ultra 用户，需排队，与其它 Claude 功能共用套餐用量。它可能看错邮件或漏掉新来的急事；敏感操作会先问你。Microsoft 365 连接尚不可用。</dd>
+<dt class="caution">使用上要注意什么</dt><dd>可能看错邮件线程、误判紧急程度，或漏掉两次检查之间新来的急事；目前不能观看或接管它的浏览器。个人跑腿如订票不如办公任务强；不能打电话或发短信，经你同意可从已连接邮箱发邮件。不能交易证券、在账户间转账或登录别人的账户；Microsoft 365 连接尚不可用。</dd>
+<dt class="choice-label">什么时候选它</dt><dd>你主要想整理邮件、准备材料，并让它主动提醒你。</dd>
 </dl>
-<p class="choice"><strong>什么时候选它：</strong>你主要想整理邮件、准备材料，并让它主动提醒你。</p>
 </article>
 <article class="card" id="dots" aria-labelledby="dots-name">
 <div class="card-head"><img src="icons/dots.png" width="56" height="56" alt=""><div><h2 id="dots-name">OpenAI dots</h2><a href="https://chatgpt.com/features/dots/" target="_blank" rel="noopener noreferrer">官方入口 ↗</a></div></div>
 <dl>
 <dt>擅长什么</dt><dd>持续推进项目，做调研、准备文件、跟进日程和客户反馈；可配合 Codex 写和改代码。</dd>
+<dt>在哪用</dt><dd>ChatGPT 网页、iOS / Android 手机应用及桌面应用（帮助中心明确包含 Windows）；可在 Slack、Microsoft Teams 联系。创建时可用手机应用、桌面应用或电脑网页，手机网页版不支持。短信联系仅为有限测试：须用 iMessage 或 RCS，不支持普通 SMS，面向美国、加拿大、墨西哥的部分个人 Pro 用户，Business / Enterprise 不可用。</dd>
+<dt>费用和谁能用</dt><dd>向符合条件市场的 Pro、Business Premium、Enterprise 推出，帮助中心也列有 Edu、Healthcare 工作区。个人 Pro 须满 18 岁，且不在欧洲经济区、瑞士、英国；Free / Go / Plus 不含 Dots。符合条件的 Pro / Business Premium 包含第一个 dot，不另收费，含一定深度工作额度，逐步放号，可能等几天。套餐具体金额未核实，请以官网为准。企业单独计费：2026-11-04 至 11-18 为预览，11-18 起对已开启的 dot 计费，管理员可关闭；带阿联酋数据或推理驻留要求的工作区不可用。价格可能调整，以官网为准。</dd>
 <dt>适合谁</dt><dd>希望交代一个项目后，让助手在对话之间继续推进、再带着待决定事项来找你的人。</dd>
-<dt class="caution">使用上要注意什么</dt><dd>逐步向符合条件市场的 Pro、Business Premium、Enterprise 用户推出，可能需要等待。个人 Pro 用户须满 18 岁，且不在欧洲经济区、瑞士或英国。符合条件的 Pro、Business Premium 含第一个 dot 和一定用量；连接哪些应用、哪些动作先批准，要由你决定。</dd>
+<dt class="caution">使用上要注意什么</dt><dd>由你决定能连哪些应用、哪些动作需先批准。影响账户或对外分享信息的操作会经自动审查，有些仍需你批准；改密码等事情由你自己做。</dd>
+<dt class="choice-label">什么时候选它</dt><dd>你需要持续跟进一个项目，而不只是问一次问题。</dd>
 </dl>
-<p class="choice"><strong>什么时候选它：</strong>你需要持续跟进一个项目，而不只是问一次问题。</p>
 </article>
 <article class="card" id="grok" aria-labelledby="grok-name">
 <div class="card-head"><img src="icons/grok.png" width="56" height="56" alt=""><div><h2 id="grok-name">Grok Bot</h2><a href="https://x.ai/bot" target="_blank" rel="noopener noreferrer">官方入口 ↗</a></div></div>
 <dl>
 <dt>擅长什么</dt><dd>同时安排多个 Bot 分头做事；演示一次流程后，可保存成例行任务。能做演示文稿、营销活动、订位和同步日程。</dd>
+<dt>在哪用</dt><dd>macOS（Apple silicon / Intel）、Windows（x64 / Arm64）、Linux（x64 / Arm64）桌面应用；iPhone 需 iOS 18+，iPad 需 iPadOS 18+，Android 需 Android 9+。文档还介绍了 Slack 和 X 上的 @bot 用法。</dd>
+<dt>费用和谁能用</dt><dd>The X Subscription 的 Premium $30/月、Super $100/月、Ultra $200/月包含 Grok Bot；免费档和 Plus（$8/月）未列出 Grok Bot。也可用团队或企业方案。价格可能调整，以官网为准。</dd>
 <dt>适合谁</dt><dd>想像交代同事一样布置任务，或有重复流程要处理的人。</dd>
-<dt class="caution">使用上要注意什么</dt><dd>The X Subscription 的 Premium、Super、Ultra 包含 Grok Bot；免费档和 Plus 在官方定价页未列出。敏感操作可经过自动审查；登录使用 Cursor 账号或单点登录。价格可能调整，以官网为准。</dd>
+<dt class="caution">使用上要注意什么</dt><dd>敏感操作可经自动审查。官方称云电脑传输和静态数据加密，可选择不用于训练；登录使用 Cursor 账号或单点登录。</dd>
+<dt class="choice-label">什么时候选它</dt><dd>你有几件事想同时推进，或有固定流程要重复做。</dd>
 </dl>
-<p class="choice"><strong>什么时候选它：</strong>你有几件事想同时推进，或有固定流程要重复做。</p>
 </article>
 <article class="card" id="openclaw" aria-labelledby="openclaw-name">
 <div class="card-head"><img src="icons/openclaw.png" width="56" height="56" alt=""><div><h2 id="openclaw-name">OpenClaw</h2><a href="https://openclaw.ai/" target="_blank" rel="noopener noreferrer">官方入口 ↗</a></div></div>
 <dl>
 <dt>擅长什么</dt><dd>装在自己的电脑上，在常用聊天应用里整理邮件、管理日历、办理值机；也能浏览网页、填表和读写文件。</dd>
+<dt>在哪用</dt><dd>自己安装：桌面应用支持 macOS 15+、Windows 10/11、Linux，也可用命令行安装。可在 WhatsApp、Telegram、Discord、Slack、Signal、iMessage 等聊天应用里使用（官网称共 29 个渠道）。</dd>
+<dt>费用和谁能用</dt><dd>软件本身免费，无托管服务或订阅；所用 AI 服务可能另收费，需自己准备服务密钥或本地服务。适合愿意自行安装、管理电脑和密钥的人。价格可能调整，以官网为准。</dd>
 <dt>适合谁</dt><dd>愿意自己安装、管理电脑和服务密钥，希望把记忆保存在自己机器上的人。</dd>
-<dt class="caution">使用上要注意什么</dt><dd>软件本身免费开源，所连接的 AI 服务可能另收费，需要自己准备。安装配置比打开网站多几步。数据在本机，但消息仍会发往你配置的 AI 服务和聊天平台；电脑操作权限由你选择。</dd>
+<dt class="caution">使用上要注意什么</dt><dd>安装和配置比打开网站多几步；电脑操作权限由你选择。数据在自己设备上，但消息仍会发往你配置的 AI 服务和聊天平台。默认每日版本检查可关闭。</dd>
+<dt class="choice-label">什么时候选它</dt><dd>你愿意花时间配置，并想自己管理它的运行环境。</dd>
 </dl>
-<p class="choice"><strong>什么时候选它：</strong>你愿意花时间配置，并想自己管理它的运行环境。</p>
 </article>
 <article class="card" id="gemini" aria-labelledby="gemini-name">
 <div class="card-head"><img src="icons/gemini.png" width="56" height="56" alt=""><div><h2 id="gemini-name">Gemini Spark</h2><a href="https://gemini.google.com" target="_blank" rel="noopener noreferrer">官方入口 ↗</a></div></div>
 <p class="rename">Google 现在把这个功能叫做「Tasks in Gemini」（任务），以前叫 Gemini Spark。这里沿用四象限的显示名；使用时可在对话框旁切换「Chat / Task」。</p>
 <dl>
 <dt>擅长什么</dt><dd>清理邮箱、盯机票酒店降价，做带出处的调研并生成文档、表格和幻灯片；可配合 Gmail、日历等 Google 工具定时处理任务。</dd>
+<dt>在哪用</dt><dd>Gemini 手机应用、Mac 上的 Gemini 应用，以及 gemini.google.com 网页。</dd>
+<dt>费用和谁能用</dt><dd>须满 18 岁，使用个人 Google 账号（暂不支持工作 / 学校账号），订阅 Google AI Pro 或 Ultra，并开启 Keep Activity。在 Gemini 应用已开通的地区可用，但欧洲经济区、尼日利亚、瑞士、英国除外。今日美国订阅页：Pro $19.99/月；Ultra 起价 $99.99/月，另有 $199.99/月档。价格可能调整，以官网为准。</dd>
 <dt>适合谁</dt><dd>日常已经使用 Google 个人账号和相关应用，希望把一件事交给它跟进的人。</dd>
-<dt class="caution">使用上要注意什么</dt><dd>须满 18 岁，使用个人 Google 账号，订阅 Google AI Pro 或 Ultra，并开启 Keep Activity；目前不支持工作或学校账号。地区有例外，先核对官网资格。功能仍偏试验；不要在任务对话里直接输入登录或支付信息。本机浏览时，设备需保持唤醒。</dd>
+<dt class="caution">使用上要注意什么</dt><dd>功能仍偏试验，可能出错；不要在任务对话里直接输入登录、支付或敏感信息。发消息、改删数据、付款、填表等敏感步骤应先由你确认；本机浏览时可访问已登录网站，设备需保持唤醒。</dd>
+<dt class="choice-label">什么时候选它</dt><dd>你常用 Google 应用，想把邮箱、日程和材料整理放在一起做。</dd>
 </dl>
-<p class="choice"><strong>什么时候选它：</strong>你常用 Google 应用，想把邮箱、日程和材料整理放在一起做。</p>
 </article>
 <article class="card" id="hermes" aria-labelledby="hermes-name">
 <div class="card-head"><img src="icons/hermes.png" width="56" height="56" alt=""><div><h2 id="hermes-name">Hermes Agent</h2><a href="https://hermes-agent.nousresearch.com/" target="_blank" rel="noopener noreferrer">官方入口 ↗</a></div></div>
 <dl>
 <dt>擅长什么</dt><dd>在多个聊天应用或电子邮件里使用同一份记忆；记住项目，并安排定时报告、备份和简报，也能搜索和浏览网页。</dd>
+<dt>在哪用</dt><dd>macOS、Windows、Linux 桌面应用，也可用命令行安装。可在 Telegram、Discord、Slack、WhatsApp、Signal、电子邮件和命令行里共用一份记忆；也可选 Nous Portal 云端托管。</dd>
+<dt>费用和谁能用</dt><dd>软件免费开源，所用 AI 服务和可选托管另收费。Nous Portal 档位：免费档为按量付费、仅免费模型；Plus $20/月、Super $100/月、Ultra $200/月。付费档含托管云助手和更多模型，内存及磁盘随档位不同。价格可能调整，以官网为准。</dd>
 <dt>适合谁</dt><dd>愿意自行安装，或使用 Nous 账号托管助手，希望长期跟进项目的人。</dd>
-<dt class="caution">使用上要注意什么</dt><dd>软件免费开源，所用 AI 服务和可选托管另行收费。可装在自己的电脑，也可选 Nous Portal 云端托管；本地程序关闭后，定时任务不会运行。价格可能调整，以官网为准。</dd>
+<dt class="caution">使用上要注意什么</dt><dd>本地程序关闭后，定时任务不会运行；托管实例另算。</dd>
+<dt class="choice-label">什么时候选它</dt><dd>你想让项目记忆跟着走，并安排重复的报告或备份。</dd>
 </dl>
-<p class="choice"><strong>什么时候选它：</strong>你想让项目记忆跟着走，并安排重复的报告或备份。</p>
 </article>
 <article class="card" id="muse" aria-labelledby="muse-name">
 <div class="card-head"><img src="icons/muse.png" width="56" height="56" alt=""><div><h2 id="muse-name">Meta Muse</h2><a href="https://muse.ai/" target="_blank" rel="noopener noreferrer">官方入口 ↗</a></div></div>
 <dl>
 <dt>擅长什么</dt><dd>整理邮件、订位、购物、管理日历、制定健身计划；可在 Muse 应用或 WhatsApp 里发消息，让它按目标拆计划并推进。</dd>
+<dt>在哪用</dt><dd>官方介绍先在美国的 iOS、Android 和 muse.ai 推出；官网也写可在 Muse 手机或桌面应用、WhatsApp 里发消息。App Store / Google Play 有官方应用；桌面应用的具体获取方式未核实，请以官网为准。</dd>
+<dt>费用和谁能用</dt><dd>免费有用量上限，用完可等刷新或升级。Power $20/月（每周 5 亿 Muse tokens）；Maximum $100/月（每周 30 亿 Muse tokens）。产品与订阅仍在有限测试，并非所有地区可用；须满 18 岁或所在地法定成年年龄，用 Meta 账号登录。价格可能调整，以官网为准。</dd>
 <dt>适合谁</dt><dd>希望用发消息的方式处理日常生活事务，并愿意授权相关应用的人。</dd>
-<dt class="caution">使用上要注意什么</dt><dd>官方介绍先在美国推出，产品与订阅仍在有限测试。须满 18 岁或所在地法定成年年龄，用 Meta 账号登录；免费有用量上限，也有付费订阅。它可能不准确或做出意外动作，需要你检查，必要时接手；发邮件、下单等敏感操作先问你。</dd>
+<dt class="caution">使用上要注意什么</dt><dd>可能不准确或做出意外动作，要检查并在必要时接手。发邮件、下单等敏感操作先问你，并有操作记录。可选择不把互动用于训练；官方称对话和虚拟机数据不进入 Meta 广告系统。</dd>
+<dt class="choice-label">什么时候选它</dt><dd>你想围绕一个生活目标，让助手拆计划、继续跟进。</dd>
 </dl>
-<p class="choice"><strong>什么时候选它：</strong>你想围绕一个生活目标，让助手拆计划、继续跟进。</p>
 </article>
 <article class="card" id="hark" aria-labelledby="hark-name">
 <div class="card-head"><img src="icons/hark.png" width="56" height="56" alt=""><div><h2 id="hark-name">Hark</h2><a href="https://hark.com/" target="_blank" rel="noopener noreferrer">官方入口 ↗</a></div></div>
 <dl>
-<dt>擅长什么</dt><dd>在一个长期对话里处理订餐、报销、快速调研、日历和旅行；也能浏览网站、做幻灯片，并按描述做小型面板。</dd>
+<dt>擅长什么</dt><dd>在一个长期对话里处理订餐、报销、快速调研、日历和旅行，也能跟进求职等大项目；可操作网站，并按描述做小型面板。</dd>
+<dt>在哪用</dt><dd>iOS、Android 和网页；可从 App Store / Google Play 下载 Hark Pro。</dd>
+<dt>费用和谁能用</dt><dd>完整功能可免费使用，但有用量上限。Hark Pro² $20/月，用量约为 2 倍；Hark Pro³ $100/月，用量约为 10 倍。可设置自动加购额度。价格可能调整，以官网为准。</dd>
 <dt>适合谁</dt><dd>想在网页或手机上，把零碎事务与旅行、求职等较长计划放在一起跟进的人。</dd>
-<dt class="caution">使用上要注意什么</dt><dd>完整功能可免费使用，但有用量上限。Pro² 为 $20/月，Pro³ 为 $100/月，也可设置自动加购额度。付款、登录等会先问你。价格可能调整，以官网为准。</dd>
+<dt class="caution">使用上要注意什么</dt><dd>付款、登录等会先问你。敏感凭据存放在「Secured by Hark」加密库，官方称员工和个人无法直接查看；官方说不会出售数据或用于广告。</dd>
+<dt class="choice-label">什么时候选它</dt><dd>你希望在同一段对话里接着处理生活杂事和长期计划。</dd>
 </dl>
-<p class="choice"><strong>什么时候选它：</strong>你希望在同一段对话里接着处理生活杂事和长期计划。</p>
 </article>
 <article class="card" id="quest" aria-labelledby="quest-name">
 <div class="card-head"><img src="icons/quest.png" width="56" height="56" alt=""><div><h2 id="quest-name">Quest</h2><a href="https://www.new.quest/" target="_blank" rel="noopener noreferrer">官方入口 ↗</a></div></div>
 <dl>
 <dt>擅长什么</dt><dd>先了解你的目标，整理关于你的记忆和人际关系图，再推动你行动；可按目标做小应用，并协助管理其它 AI 助手。</dd>
+<dt>在哪用</dt><dd>目前以 iOS 应用和 iMessage 为主，iOS 需 18+。App Store 还列出兼容 iPad（iPadOS 18+）、Mac（macOS 15+ 且 Apple M1 或更新）、Apple Vision（visionOS 2+）。Android 支持未核实，请以官网为准。</dd>
+<dt>费用和谁能用</dt><dd>App Store 标为免费下载。官网没有完整价目表，价格未在官网价目页核实；是否全程免费、有无订阅或地区限制：未核实，请以 App Store 和官网为准。价格可能调整，以官网为准。</dd>
 <dt>适合谁</dt><dd>想跟进长期学习或生活目标，愿意授权个人信息并检查记忆内容的人。</dd>
-<dt class="caution">使用上要注意什么</dt><dd>象限页原先没有域名；这里已补上核实的官方入口与 App Store。以 iOS / iMessage 为主，App Store 要求 iOS 18+，标为免费下载。价格未在官网价目页核实；是否全程免费、有无订阅或地区限制：未核实，请以官网为准，并查看 App Store。可自行选择连接哪些应用、哪些聊天可见。</dd>
+<dt class="caution">使用上要注意什么</dt><dd>它会用较多个人生活信息来写记忆；要愿意授权，并自己检查、改正记忆。可选择连接哪些应用、哪些聊天可见。</dd>
+<dt class="choice-label">什么时候选它</dt><dd>你想先理清长期目标，再有人持续提醒你推进。</dd>
 </dl>
-<p class="choice"><strong>什么时候选它：</strong>你想先理清长期目标，再有人持续提醒你推进。</p>
-<p class="note"><a href="https://apps.apple.com/us/app/quest-personal-ai-advisor/id6763097866" target="_blank" rel="noopener noreferrer">App Store：Quest · New Quest AI Inc.</a></p>
 </article>
 <article class="card" id="pally" aria-labelledby="pally-name">
 <div class="card-head"><img src="icons/pally.png" width="56" height="56" alt=""><div><h2 id="pally-name">Pally</h2><a href="https://pally.com/" target="_blank" rel="noopener noreferrer">官方入口 ↗</a></div></div>
 <dl>
 <dt>擅长什么</dt><dd>通过消息处理提醒、预订、购物、调研和打电话排队；读群聊帮你订位，连上邮箱、日历后做晨间简报和自动提醒。</dd>
-<dt>适合谁</dt><dd>想直接在 iMessage、Android 的 RCS 或 Telegram 发消息办事，不想另装 Pally 应用的人。</dd>
-<dt class="caution">使用上要注意什么</dt><dd>官方称免费，无需信用卡、排队或邀请；用量几乎不限，但仍有会恢复的额度。可选 Cloud Mac 为 $95/月。发送、预订或购买尚未同意的事情前会先问你。先看所在地区和使用方式是否适用；价格可能调整，以官网为准。</dd>
+<dt>在哪用</dt><dd>今日官方定价页写明：iMessage、Android RCS、WhatsApp、Telegram。不用安装 Pally 应用；也可连接自己的 WhatsApp 账号，让它协助已有聊天。</dd>
+<dt>费用和谁能用</dt><dd>官方称对所有人免费，无需信用卡、排队或邀请；用量几乎不限，额度在一周内恢复，到上限前会提醒，达上限后仍可聊天。普通用户的付费加项为 Cloud Mac $95/月。另有仅邀请的 Pally VIP（$1,000/月或 $10,000/年），未作为普通选项推广；旧 Pro / Max 方案已不存在。价格可能调整，以官网为准。</dd>
+<dt>适合谁</dt><dd>想直接在消息应用里发消息办事，不想另装 Pally 应用的人。</dd>
+<dt class="caution">使用上要注意什么</dt><dd>发送、预订或购买你尚未同意的事情前会先问你；官方称不会未经询问私自给别人发消息。通过它下单时会向商家收手续费，但商家不能付费改变推荐。</dd>
+<dt class="choice-label">什么时候选它</dt><dd>你更习惯发消息交代事情，也需要提醒或电话排队。</dd>
 </dl>
-<p class="choice"><strong>什么时候选它：</strong>你更习惯发消息交代事情，也需要提醒或电话排队。</p>
 </article>
 <article class="card" id="wabi" aria-labelledby="wabi-name">
 <div class="card-head"><img src="icons/wabi.png" width="56" height="56" alt=""><div><h2 id="wabi-name">Wabi</h2><a href="https://wabi.ai/" target="_blank" rel="noopener noreferrer">官方入口 ↗</a></div></div>
 <dl>
 <dt>擅长什么</dt><dd>自己用或和家人、朋友、同事一起用；安排晚餐、家庭日历和旅行，把计划做成共享日历、地图行程或投票，也能跟进退款、退货和遗漏的事。</dd>
+<dt>在哪用</dt><dd>iOS、Android、Mac、Windows，入口见官方下载页。</dd>
+<dt>费用和谁能用</dt><dd>条款写目前免费，以后若增加付费功能会先通知。须满 13 岁；服务面向美国访客，不保证美国以外可用。价格可能调整，以官网为准。</dd>
 <dt>适合谁</dt><dd>经常需要与伴侣、家人、朋友共同安排日程或旅行的人。</dd>
-<dt class="caution">使用上要注意什么</dt><dd>条款写目前免费，未来若增加付费功能会先通知；须满 13 岁。服务面向美国访客，不保证美国以外可用。重要操作先征求同意；群聊里发出的内容，在你离开后仍可能对其他成员可见。价格和地区以官网为准。</dd>
+<dt class="caution">使用上要注意什么</dt><dd>重要操作先征求你同意。条款称不会用你的对话训练模型；群聊里发出的内容在你离开后仍可能对其他成员可见。</dd>
+<dt class="choice-label">什么时候选它</dt><dd>你希望几个人在同一段对话里一起商量、一起推进计划。</dd>
 </dl>
-<p class="choice"><strong>什么时候选它：</strong>你希望几个人在同一段对话里一起商量、一起推进计划。</p>
 </article>
 </section>
 <section class="efficiency" aria-labelledby="efficiency-title">
@@ -194,17 +214,17 @@ footer h2 { color: #F2F2F2; font-size: 18px; }
 <h2>官方来源 · 信息截至 2026-11</h2>
 <p>卡片是白话摘要，具体资格、用量和限制请查看对应官方页面。未列出的信息：未核实，请以官网为准。</p>
 <ul class="sources">
-<li><strong>Claude Duet</strong>：<a href="https://claude.com/product/claude-duet" target="_blank" rel="noopener noreferrer">官网</a> · <a href="https://claude.com/resources/articles/claude-duet" target="_blank" rel="noopener noreferrer">产品介绍</a> · <a href="https://support.claude.com/en/articles/17631495-get-started-with-claude-duet" target="_blank" rel="noopener noreferrer">入门与限制</a> · <a href="https://claude.ai" target="_blank" rel="noopener noreferrer">网页入口</a></li>
-<li><strong>OpenAI dots</strong>：<a href="https://chatgpt.com/features/dots/" target="_blank" rel="noopener noreferrer">官网</a> · <a href="https://openai.com/index/introducing-dots/" target="_blank" rel="noopener noreferrer">官方介绍</a> · <a href="https://help.openai.com/en/articles/20001530-getting-started-with-your-dot" target="_blank" rel="noopener noreferrer">入门与资格</a></li>
-<li><strong>Grok Bot</strong>：<a href="https://x.ai/bot" target="_blank" rel="noopener noreferrer">官网</a> · <a href="https://docs.x.ai/grok-bot/overview" target="_blank" rel="noopener noreferrer">功能文档</a> · <a href="https://docs.x.ai/grok-bot/get-started" target="_blank" rel="noopener noreferrer">入门</a> · <a href="https://x.ai/pricing" target="_blank" rel="noopener noreferrer">定价</a></li>
-<li><strong>OpenClaw</strong>：<a href="https://openclaw.ai/" target="_blank" rel="noopener noreferrer">官网</a> · <a href="https://docs.openclaw.ai/" target="_blank" rel="noopener noreferrer">文档</a> · <a href="https://github.com/openclaw/openclaw" target="_blank" rel="noopener noreferrer">官方代码</a></li>
+<li><strong>Claude Duet</strong>：<a href="https://claude.com/product/claude-duet" target="_blank" rel="noopener noreferrer">官网</a> · <a href="https://claude.com/resources/articles/claude-duet" target="_blank" rel="noopener noreferrer">产品介绍</a> · <a href="https://support.claude.com/en/articles/17631495-get-started-with-claude-duet" target="_blank" rel="noopener noreferrer">入门与限制</a> · <a href="https://claude.ai" target="_blank" rel="noopener noreferrer">网页入口</a> · <a href="https://claude.com/pricing" target="_blank" rel="noopener noreferrer">所需套餐定价</a> · <a href="https://apps.apple.com/us/app/claude-duet-by-anthropic/id6803276000" target="_blank" rel="noopener noreferrer">App Store</a> · <a href="https://play.google.com/store/apps/details?id=com.anthropic.aibo" target="_blank" rel="noopener noreferrer">Google Play</a></li>
+<li><strong>OpenAI dots</strong>：<a href="https://chatgpt.com/features/dots/" target="_blank" rel="noopener noreferrer">官网</a> · <a href="https://openai.com/index/introducing-dots/" target="_blank" rel="noopener noreferrer">官方介绍</a> · <a href="https://help.openai.com/en/articles/20001530-getting-started-with-your-dot" target="_blank" rel="noopener noreferrer">入门与资格</a> · <a href="https://chatgpt.com/pricing" target="_blank" rel="noopener noreferrer">套餐定价</a> · <a href="https://chatgpt.com/download" target="_blank" rel="noopener noreferrer">下载与入门</a></li>
+<li><strong>Grok Bot</strong>：<a href="https://x.ai/bot" target="_blank" rel="noopener noreferrer">官网</a> · <a href="https://docs.x.ai/grok-bot/overview" target="_blank" rel="noopener noreferrer">功能文档</a> · <a href="https://docs.x.ai/grok-bot/get-started" target="_blank" rel="noopener noreferrer">入门</a> · <a href="https://x.ai/pricing" target="_blank" rel="noopener noreferrer">定价</a> · <a href="https://docs.x.ai/grok-bot/mobile" target="_blank" rel="noopener noreferrer">手机说明</a> · <a href="https://apps.apple.com/app/apple-store/id6670324846" target="_blank" rel="noopener noreferrer">App Store</a> · <a href="https://play.google.com/store/apps/details?id=ai.x.grok" target="_blank" rel="noopener noreferrer">Google Play</a></li>
+<li><strong>OpenClaw</strong>：<a href="https://openclaw.ai/" target="_blank" rel="noopener noreferrer">官网</a> · <a href="https://docs.openclaw.ai/" target="_blank" rel="noopener noreferrer">文档</a> · <a href="https://github.com/openclaw/openclaw" target="_blank" rel="noopener noreferrer">官方代码</a> · <a href="https://openclaw.ai/install" target="_blank" rel="noopener noreferrer">安装与下载</a> · <a href="https://docs.openclaw.ai/start/getting-started" target="_blank" rel="noopener noreferrer">入门</a></li>
 <li><strong>Gemini Spark</strong>：<a href="https://gemini.google.com" target="_blank" rel="noopener noreferrer">官网</a> · <a href="https://support.google.com/gemini/answer/17094507" target="_blank" rel="noopener noreferrer">更名、用法与资格</a> · <a href="https://blog.google/innovation-and-ai/products/gemini-app/next-evolution-gemini-app/" target="_blank" rel="noopener noreferrer">产品介绍</a> · <a href="https://gemini.google/subscriptions/" target="_blank" rel="noopener noreferrer">订阅</a></li>
-<li><strong>Hermes Agent</strong>：<a href="https://hermes-agent.nousresearch.com/" target="_blank" rel="noopener noreferrer">官网</a> · <a href="https://github.com/nousresearch/hermes-agent/" target="_blank" rel="noopener noreferrer">官方代码与说明</a></li>
-<li><strong>Meta Muse</strong>：<a href="https://muse.ai/" target="_blank" rel="noopener noreferrer">官网</a> · <a href="https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/" target="_blank" rel="noopener noreferrer">官方介绍</a> · <a href="https://www.meta.com/help/superintelligence/1331373868832401/" target="_blank" rel="noopener noreferrer">入门</a> · <a href="https://www.meta.com/help/subscriptions/1021145227643680/" target="_blank" rel="noopener noreferrer">订阅</a></li>
-<li><strong>Hark</strong>：<a href="https://hark.com/" target="_blank" rel="noopener noreferrer">官网</a> · <a href="https://hark.com/using-hark" target="_blank" rel="noopener noreferrer">用法</a> · <a href="https://hark.com/articles/introducing-hark-handoff" target="_blank" rel="noopener noreferrer">电脑操作介绍</a> · <a href="https://hark.com/pricing" target="_blank" rel="noopener noreferrer">定价</a></li>
+<li><strong>Hermes Agent</strong>：<a href="https://hermes-agent.nousresearch.com/" target="_blank" rel="noopener noreferrer">官网</a> · <a href="https://github.com/nousresearch/hermes-agent/" target="_blank" rel="noopener noreferrer">官方代码与说明</a> · <a href="https://hermes-agent.nousresearch.com/docs" target="_blank" rel="noopener noreferrer">文档与帮助</a> · <a href="https://hermes-agent.nousresearch.com/ai-models" target="_blank" rel="noopener noreferrer">Nous Portal 定价</a> · <a href="https://hermes-agent.nousresearch.com/#downloads" target="_blank" rel="noopener noreferrer">下载</a> · <a href="https://portal.nousresearch.com/" target="_blank" rel="noopener noreferrer">Nous Portal 账号与托管</a></li>
+<li><strong>Meta Muse</strong>：<a href="https://muse.ai/" target="_blank" rel="noopener noreferrer">官网</a> · <a href="https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/" target="_blank" rel="noopener noreferrer">官方介绍</a> · <a href="https://www.meta.com/help/superintelligence/1331373868832401/" target="_blank" rel="noopener noreferrer">入门</a> · <a href="https://www.meta.com/help/subscriptions/1021145227643680/" target="_blank" rel="noopener noreferrer">订阅</a> · <a href="https://apps.apple.com/us/app/muse-from-meta/id6760173601" target="_blank" rel="noopener noreferrer">App Store</a> · <a href="https://play.google.com/store/apps/details?id=com.facebook.aura" target="_blank" rel="noopener noreferrer">Google Play</a></li>
+<li><strong>Hark</strong>：<a href="https://hark.com/" target="_blank" rel="noopener noreferrer">官网</a> · <a href="https://hark.com/using-hark" target="_blank" rel="noopener noreferrer">用法</a> · <a href="https://hark.com/articles/introducing-hark-handoff" target="_blank" rel="noopener noreferrer">电脑操作介绍</a> · <a href="https://hark.com/pricing" target="_blank" rel="noopener noreferrer">定价</a> · <a href="https://apps.apple.com/us/app/hark-pro/id6772362941" target="_blank" rel="noopener noreferrer">App Store</a> · <a href="https://play.google.com/store/apps/details?id=com.hark.android" target="_blank" rel="noopener noreferrer">Google Play</a></li>
 <li><strong>Quest</strong>：<a href="https://www.new.quest/" target="_blank" rel="noopener noreferrer">官网</a> · <a href="https://start.new.quest" target="_blank" rel="noopener noreferrer">开始使用</a> · <a href="https://apps.apple.com/us/app/quest-personal-ai-advisor/id6763097866" target="_blank" rel="noopener noreferrer">App Store</a></li>
-<li><strong>Pally</strong>：<a href="https://pally.com/" target="_blank" rel="noopener noreferrer">官网</a> · <a href="https://pally.com/pricing" target="_blank" rel="noopener noreferrer">定价与免费说明</a></li>
-<li><strong>Wabi</strong>：<a href="https://wabi.ai/" target="_blank" rel="noopener noreferrer">官网</a> · <a href="https://wabi.ai/download" target="_blank" rel="noopener noreferrer">下载</a> · <a href="https://wabi.ai/terms" target="_blank" rel="noopener noreferrer">条款</a> · <a href="https://apps.apple.com/us/app/wabi-ai-assistant/id6747768928" target="_blank" rel="noopener noreferrer">App Store</a></li>
+<li><strong>Pally</strong>：<a href="https://pally.com/" target="_blank" rel="noopener noreferrer">官网</a> · <a href="https://pally.com/pricing" target="_blank" rel="noopener noreferrer">定价与免费说明</a> · <a href="https://pally.com/recipes" target="_blank" rel="noopener noreferrer">用法集</a> · <a href="https://pally.com/guides" target="_blank" rel="noopener noreferrer">指南</a></li>
+<li><strong>Wabi</strong>：<a href="https://wabi.ai/" target="_blank" rel="noopener noreferrer">官网</a> · <a href="https://wabi.ai/download" target="_blank" rel="noopener noreferrer">下载</a> · <a href="https://wabi.ai/terms" target="_blank" rel="noopener noreferrer">条款</a> · <a href="https://apps.apple.com/us/app/wabi-ai-assistant/id6747768928" target="_blank" rel="noopener noreferrer">App Store</a> · <a href="https://play.google.com/store/apps/details?id=ai.wabi.android.app" target="_blank" rel="noopener noreferrer">Google Play</a></li>
 </ul>
 <p>产品变化快，价格可能调整，价格和能否使用以官网为准。本页不构成消费建议。</p>
 <p>Albert · 个人对照页 · 与任何公司无推广合作</p>
